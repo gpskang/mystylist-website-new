@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>MY STYLIST ADMIN</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+	<link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+</head>
+
+<body>
+	<div class="main d-flex">
+		<aside class="main-left-sidebar">
+			<div class="logo mb-2">
+				<a href="#"><img src="assets/img/logo.svg" alt="" title=""></a>
+			</div>
+			<div class="left-menu-main flex-fill">
+				<h6 class="menu-title">Main</h6>
+				<ul class="left-menu">
+					<li class="active"><a href="#"><img src="assets/img/icon-dashboard.svg" alt="" title="">Dashboard</a></li>
+					<li><a href="#"><img src="assets/img/icon-stylists-management.svg" alt="" title="">Stylists Management</a></li>
+					<li><a href="#"><img src="assets/img/icon-category-management.svg" alt="" title="">Category Management</a></li>
+					<li><a href="#"><img src="assets/img/icon-services-management.svg" alt="" title="">Services Management</a></li>
+				</ul>
+				<h6 class="menu-title">Business Management</h6>
+				<ul class="left-menu">
+					<li><a href="#"><img src="assets/img/icon-offer.svg" alt="" title="">Offer</a></li>
+					<li><a href="#"><img src="assets/img/icon-package.svg" alt="" title="">Package</a></li>
+					<li><a href="#"><img src="assets/img/icon-campaign.svg" alt="" title="">Campaign</a></li>
+					<li><a href="#"><img src="assets/img/icon-user-jobs.svg" alt="" title="">User Jobs</a></li>
+				</ul>
+				<h6 class="menu-title">Admin Approval</h6>
+				<ul class="left-menu">
+					<li><a href="#"><img src="assets/img/icon-gallery.svg" alt="" title="">Stylist gallery</a></li>
+					<li><a href="#"><img src="assets/img/icon-gallery.svg" alt="" title="">Saloon gallery</a></li>
+					<li><a href="#"><img src="assets/img/icon-offer.svg" alt="" title="">Offer</a></li>
+					<li><a href="#"><img src="assets/img/icon-package.svg" alt="" title="">Package</a></li>
+					<li><a href="#"><img src="assets/img/icon-campaign.svg" alt="" title="">Campaign</a></li>
+					<li><a href="#"><img src="assets/img/icon-user-jobs.svg" alt="" title="">User Jobs</a></li>
+				</ul>
+				<h6 class="menu-title">Chat Supervision</h6>
+				<ul class="left-menu">
+					<li><a href="#"><img src="assets/img/iocn-experts-inbox.svg" alt="" title="">Experts inbox</a></li>
+					<li><a href="#"><img src="assets/img/icon-user.svg" alt="" title="">User Inbox</a></li>
+				</ul>
+				<h6 class="menu-title">Notification Management</h6>
+				<ul class="left-menu">
+					<li><a href="#"><img src="assets/img/icon-push-notification.svg" alt="" title="">Push Notification</a></li>
+				</ul>
+				<h6 class="menu-title">Reports</h6>
+				<ul class="left-menu">
+					<li><a href="#"><img src="assets/img/icon-my-reports.svg" alt="" title="">My Reports</a></li>
+				</ul>
+				<h6 class="menu-title">Appointment Management</h6>
+				<ul class="left-menu">
+					<li><a href="#"><img src="assets/img/icon-appointment.svg" alt="" title="">Appointment</a></li>
+				</ul>
+				<h6 class="menu-title">FAQ’s Management</h6>
+				<ul class="left-menu">
+					<li><a href="#"><img src="assets/img/icon-push-notification.svg" alt="" title="">FAQ’S</a></li>
+				</ul>
+			</div>
+		</aside>
+
+		<div class="main-right-content flex-fill">
+
+			<div class="top-navbar">
+				<div class="container-fluid">
+					<div class="top-navbar-inner">
+						<div class="row align-items-center">
+							<div class="col-lg-6">
+								<div class="top-navbar-left">
+									<p class="mb-0">Welcome Back, <img src="assets/img/icon-wave.svg" alt="" title=""></p>
+									<p class="mb-0"><strong>Elisha Atif</strong></p>
+								</div>
+							</div>
+							<div class="col-lg-6 text-end">
+								<div class="d-inline-block align-top mx-1 top-navbar-notification">
+									<a><img src="assets/img/icon-notification.svg" alt="" title=""></a>
+								</div>
+								<div class="d-inline-block align-top mx-1 top-navbar-setting">
+									<a><img src="assets/img/icon-setting.svg" alt="" title=""></a>
+								</div>
+
+								<div class="dropdown d-inline-block align-top ms-1 top-navbar-user">
+									<a class="dropdown-toggle d-flex align-items-center text-start" data-bs-toggle="dropdown" aria-expanded="false">
+										<figure class="me-2 mb-0 top-navbar-user-img"><img src="assets/img/dummy-user.png" alt="" title=""></figure>
+										<div>
+											<strong class="d-block top-navbar-user-name">Elisha Atif</strong>
+											<span class="d-block top-navbar-user-email">elishaatif456@gmail.com</span>
+										</div>
+									</a>
+									<ul class="dropdown-menu">
+										<li><a class="dropdown-item" href="#">Action</a></li>
+										<li><a class="dropdown-item" href="#">Another action</a></li>
+										<li><a class="dropdown-item" href="#">Something else here</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="main-right-content-inner">
+
+				<div class="card mb-4">
+					<div class="card-body">
+						<div class="d-flex align-items-center">
+							<h4 class="card-title mb-0">Dashboard</h4>
+							<div class="ms-auto">
+								<button type="button" class="btn-light ms-2"><img class="me-2" src="assets/img/icon-calendar.svg" alt="" title="">January</button>
+								<button type="button" class="btn-light ms-2"><img class="me-2" src="assets/img/icon-filter.svg" alt="" title="">Filter</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-lg-4">
+						<div class="card mb-4">
+							<div class="card-body">
+								<div class="d-flex align-items-center mb-3">
+									<div class="me-3">
+										<div class="icon-wrap"><img src="assets/img/icon-phone.svg" alt="" title=""></div>
+									</div>
+									<p class="mb-0">Total Stylist Apps Download</p>
+								</div>
+								<h3>$23,0945</h3>
+								<div class="d-flex align-items-center fs-12">
+									<span class="badge bg-3 tc-3 me-2"><i class="fa-solid fa-arrow-right me-2"></i>20.9%</span> <i class="fa-solid fa-plus me-2"></i>18.4K this week
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="card mb-4">
+							<div class="card-body">
+								<div class="d-flex align-items-center mb-3">
+									<div class="me-3">
+										<div class="icon-wrap"><img src="assets/img/icon-phone.svg" alt="" title=""></div>
+									</div>
+									<p class="mb-0">Total Stylist Apps Download</p>
+								</div>
+								<h3>$23,0945</h3>
+								<div class="d-flex align-items-center fs-12">
+									<span class="badge bg-4 tc-4 me-2"><i class="fa-solid fa-arrow-right me-2"></i>20.9%</span> <i class="fa-solid fa-plus me-2"></i>18.4K this week
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="card mb-4">
+							<div class="card-body">
+								<div class="d-flex align-items-center mb-3">
+									<div class="me-3">
+										<div class="icon-wrap"><img src="assets/img/icon-phone.svg" alt="" title=""></div>
+									</div>
+									<p class="mb-0">Total Stylist Apps Download</p>
+								</div>
+								<h3>$23,0945</h3>
+								<div class="d-flex align-items-center fs-12">
+									<span class="badge bg-3 tc-3 me-2"><i class="fa-solid fa-arrow-right me-2"></i>20.9%</span> <i class="fa-solid fa-plus me-2"></i>18.4K this week
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="card mb-4">
+							<div class="card-body">
+								<div class="d-flex align-items-center mb-3">
+									<div class="me-3">
+										<div class="icon-wrap"><img src="assets/img/icon-phone.svg" alt="" title=""></div>
+									</div>
+									<p class="mb-0">Total Stylist Apps Download</p>
+								</div>
+								<h3>$23,0945</h3>
+								<div class="d-flex align-items-center fs-12">
+									<span class="badge bg-3 tc-3 me-2"><i class="fa-solid fa-arrow-right me-2"></i>20.9%</span> <i class="fa-solid fa-plus me-2"></i>18.4K this week
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="card mb-4">
+							<div class="card-body">
+								<div class="d-flex align-items-center mb-3">
+									<div class="me-3">
+										<div class="icon-wrap"><img src="assets/img/icon-phone.svg" alt="" title=""></div>
+									</div>
+									<p class="mb-0">Total Stylist Apps Download</p>
+								</div>
+								<h3>$23,0945</h3>
+								<div class="d-flex align-items-center fs-12">
+									<span class="badge bg-4 tc-4 me-2"><i class="fa-solid fa-arrow-right me-2"></i>20.9%</span> <i class="fa-solid fa-plus me-2"></i>18.4K this week
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="card mb-4">
+							<div class="card-body">
+								<div class="d-flex align-items-center mb-3">
+									<div class="me-3">
+										<div class="icon-wrap"><img src="assets/img/icon-phone.svg" alt="" title=""></div>
+									</div>
+									<p class="mb-0">Total Stylist Apps Download</p>
+								</div>
+								<h3>$23,0945</h3>
+								<div class="d-flex align-items-center fs-12">
+									<span class="badge bg-4 tc-4 me-2"><i class="fa-solid fa-arrow-right me-2"></i>20.9%</span> <i class="fa-solid fa-plus me-2"></i>18.4K this week
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="card mb-4">
+							<div class="card-body">
+								<div class="d-flex align-items-center mb-3">
+									<div class="me-3">
+										<div class="icon-wrap"><img src="assets/img/icon-phone.svg" alt="" title=""></div>
+									</div>
+									<p class="mb-0">Total Stylist Apps Download</p>
+								</div>
+								<h3>$23,0945</h3>
+								<div class="d-flex align-items-center fs-12">
+									<span class="badge bg-3 tc-3 me-2"><i class="fa-solid fa-arrow-right me-2"></i>20.9%</span> <i class="fa-solid fa-plus me-2"></i>18.4K this week
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="card mb-4">
+					<div class="card-body">
+						<div class="d-flex align-items-center">
+							<div class="bs-r-6 ps-3">
+								<h4 class="card-title mb-0">Top User</h4>
+								<p class="mb-0 tc-5">Lorem ipsum dolor sit</p>
+							</div>
+							<div class="ms-auto">
+								<button type="button" class="btn-light ms-2"><img class="me-2" src="assets/img/icon-filter.svg" alt="" title="">Filter</button>
+							</div>
+						</div>
+					</div>
+					<div class="card-body p-0">
+						<table class="table mb-0">
+							<thead>
+								<tr>
+									<th>User Name</th>
+									<th>Total Spending</th>
+									<th>Total Services</th>
+									<th>Email</th>
+									<th>Phone Number</th>
+									<th>Joining Date</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Nico Robin</td>
+									<td>$8,759</td>
+									<td>587</td>
+									<td>jamesbond656@gmail.com</td>
+									<td>+1 456 245 6979</td>
+									<td>23 Oct, 2023</td>
+								</tr>
+								<tr>
+									<td>Nico Robin</td>
+									<td>$8,759</td>
+									<td>587</td>
+									<td>jamesbond656@gmail.com</td>
+									<td>+1 456 245 6979</td>
+									<td>23 Oct, 2023</td>
+								</tr>
+								<tr>
+									<td>Nico Robin</td>
+									<td>$8,759</td>
+									<td>587</td>
+									<td>jamesbond656@gmail.com</td>
+									<td>+1 456 245 6979</td>
+									<td>23 Oct, 2023</td>
+								</tr>
+								<tr>
+									<td>Nico Robin</td>
+									<td>$8,759</td>
+									<td>587</td>
+									<td>jamesbond656@gmail.com</td>
+									<td>+1 456 245 6979</td>
+									<td>23 Oct, 2023</td>
+								</tr>
+								<tr>
+									<td>Nico Robin</td>
+									<td>$8,759</td>
+									<td>587</td>
+									<td>jamesbond656@gmail.com</td>
+									<td>+1 456 245 6979</td>
+									<td>23 Oct, 2023</td>
+								</tr>
+								<tr>
+									<td>Nico Robin</td>
+									<td>$8,759</td>
+									<td>587</td>
+									<td>jamesbond656@gmail.com</td>
+									<td>+1 456 245 6979</td>
+									<td>23 Oct, 2023</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="card mb-4">
+					<div class="card-body">
+						<div class="d-flex align-items-center">
+							<div class="bs-r-6 ps-3">
+								<h4 class="card-title mb-0">Top Experts</h4>
+								<p class="mb-0 tc-5">Lorem ipsum dolor sit</p>
+							</div>
+							<div class="ms-auto">
+								<button type="button" class="btn-light ms-2"><img class="me-2" src="assets/img/icon-filter.svg" alt="" title="">Filter</button>
+							</div>
+						</div>
+					</div>
+					<div class="card-body p-0">
+						<table class="table mb-0">
+							<thead>
+								<tr>
+									<th>User Name</th>
+									<th>Total Spending</th>
+									<th>Total Services</th>
+									<th>Email</th>
+									<th>Phone Number</th>
+									<th>Joining Date</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Nico Robin</td>
+									<td>$8,759</td>
+									<td>587</td>
+									<td>jamesbond656@gmail.com</td>
+									<td>+1 456 245 6979</td>
+									<td>23 Oct, 2023</td>
+								</tr>
+								<tr>
+									<td>Nico Robin</td>
+									<td>$8,759</td>
+									<td>587</td>
+									<td>jamesbond656@gmail.com</td>
+									<td>+1 456 245 6979</td>
+									<td>23 Oct, 2023</td>
+								</tr>
+								<tr>
+									<td>Nico Robin</td>
+									<td>$8,759</td>
+									<td>587</td>
+									<td>jamesbond656@gmail.com</td>
+									<td>+1 456 245 6979</td>
+									<td>23 Oct, 2023</td>
+								</tr>
+								<tr>
+									<td>Nico Robin</td>
+									<td>$8,759</td>
+									<td>587</td>
+									<td>jamesbond656@gmail.com</td>
+									<td>+1 456 245 6979</td>
+									<td>23 Oct, 2023</td>
+								</tr>
+								<tr>
+									<td>Nico Robin</td>
+									<td>$8,759</td>
+									<td>587</td>
+									<td>jamesbond656@gmail.com</td>
+									<td>+1 456 245 6979</td>
+									<td>23 Oct, 2023</td>
+								</tr>
+								<tr>
+									<td>Nico Robin</td>
+									<td>$8,759</td>
+									<td>587</td>
+									<td>jamesbond656@gmail.com</td>
+									<td>+1 456 245 6979</td>
+									<td>23 Oct, 2023</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-lg-4">
+						<div class="card mb-4">
+							<div class="card-body">
+								<div class="notifications-box"></div>
+								<div class="notifications-header">
+									<div class="d-flex align-items-center justify-content-between mb-3">
+										<h4 class="mb-0">Notifications</h4>
+										<div class="dropdown notifications-dropdown-v">
+											<a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+											<ul class="dropdown-menu">
+												<li><a class="dropdown-item" href="#">Action</a></li>
+												<li><a class="dropdown-item" href="#">Another action</a></li>
+												<li><a class="dropdown-item" href="#">Something else here</a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="notifications-tabs d-flex align-items-center justify-content-between mb-3">
+										<a href="#" class="active">All</a>
+										<a href="#">Offer</a>
+										<a href="#">Promotion</a>
+										<a href="#">Appointment</a>
+									</div>
+									<div class="d-flex align-items-center justify-content-between mb-3">
+										<p class="tc-5 mb-0"><i class="fa-solid fa-bell me-2"></i>All Notifications</p>
+										<p class="tc-5 mb-0"><i class="fa-solid fa-check-double me-2"></i>Mark all as read</p>
+									</div>
+								</div>
+								<div class="notifications-body">
+
+									<div class="notifications-item d-flex align-items-center justify-content-between mb-3">
+										<div class="me-3">
+											<div class="d-flex">
+												<figure class="flex-shrink-0 me-2 mb-0 user-img-40"><img src="assets/img/dummy-user.png" alt="" title=""></figure>
+												<div class="flex-grow-1">
+													<p class="mb-1 tc-5">Your appointment has been successfully schedule with <strong class="tc-6 fw-medium">Nickson John</strong></p>
+													<p class="tc-7 mb-0">1 hr ago</p>
+												</div>
+											</div>
+										</div>
+										<div class="">
+											<div class="dropdown notifications-dropdown-h">
+												<a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-ellipsis"></i></a>
+												<ul class="dropdown-menu">
+													<li><a class="dropdown-item" href="#">Action</a></li>
+													<li><a class="dropdown-item" href="#">Another action</a></li>
+													<li><a class="dropdown-item" href="#">Something else here</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="notifications-item d-flex align-items-center justify-content-between mb-3">
+										<div class="me-3">
+											<div class="d-flex">
+												<figure class="flex-shrink-0 me-2 mb-0 user-img-40"><img src="assets/img/dummy-user.png" alt="" title=""></figure>
+												<div class="flex-grow-1">
+													<p class="mb-1 tc-5">Your appointment has been successfully schedule with <strong class="tc-6 fw-medium">Nickson John</strong></p>
+													<p class="tc-7 mb-0">1 hr ago</p>
+												</div>
+											</div>
+										</div>
+										<div class="">
+											<div class="dropdown notifications-dropdown-h">
+												<a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-ellipsis"></i></a>
+												<ul class="dropdown-menu">
+													<li><a class="dropdown-item" href="#">Action</a></li>
+													<li><a class="dropdown-item" href="#">Another action</a></li>
+													<li><a class="dropdown-item" href="#">Something else here</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="notifications-item d-flex align-items-center justify-content-between mb-3">
+										<div class="me-3">
+											<div class="d-flex">
+												<figure class="flex-shrink-0 me-2 mb-0 user-img-40"><img src="assets/img/dummy-user.png" alt="" title=""></figure>
+												<div class="flex-grow-1">
+													<p class="mb-1 tc-5">Your appointment has been successfully schedule with <strong class="tc-6 fw-medium">Nickson John</strong></p>
+													<p class="tc-7 mb-0">1 hr ago</p>
+												</div>
+											</div>
+										</div>
+										<div class="">
+											<div class="dropdown notifications-dropdown-h">
+												<a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-ellipsis"></i></a>
+												<ul class="dropdown-menu">
+													<li><a class="dropdown-item" href="#">Action</a></li>
+													<li><a class="dropdown-item" href="#">Another action</a></li>
+													<li><a class="dropdown-item" href="#">Something else here</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="notifications-item d-flex align-items-center justify-content-between mb-3">
+										<div class="me-3">
+											<div class="d-flex">
+												<figure class="flex-shrink-0 me-2 mb-0 user-img-40"><img src="assets/img/dummy-user.png" alt="" title=""></figure>
+												<div class="flex-grow-1">
+													<p class="mb-1 tc-5">Your appointment has been successfully schedule with <strong class="tc-6 fw-medium">Nickson John</strong></p>
+													<p class="tc-7 mb-0">1 hr ago</p>
+												</div>
+											</div>
+										</div>
+										<div class="">
+											<div class="dropdown notifications-dropdown-h">
+												<a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-ellipsis"></i></a>
+												<ul class="dropdown-menu">
+													<li><a class="dropdown-item" href="#">Action</a></li>
+													<li><a class="dropdown-item" href="#">Another action</a></li>
+													<li><a class="dropdown-item" href="#">Something else here</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="notifications-item d-flex align-items-center justify-content-between mb-3">
+										<div class="me-3">
+											<div class="d-flex">
+												<figure class="flex-shrink-0 me-2 mb-0 user-img-40"><img src="assets/img/dummy-user.png" alt="" title=""></figure>
+												<div class="flex-grow-1">
+													<p class="mb-1 tc-5">Your appointment has been successfully schedule with <strong class="tc-6 fw-medium">Nickson John</strong></p>
+													<p class="tc-7 mb-0">1 hr ago</p>
+												</div>
+											</div>
+										</div>
+										<div class="">
+											<div class="dropdown notifications-dropdown-h">
+												<a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-ellipsis"></i></a>
+												<ul class="dropdown-menu">
+													<li><a class="dropdown-item" href="#">Action</a></li>
+													<li><a class="dropdown-item" href="#">Another action</a></li>
+													<li><a class="dropdown-item" href="#">Something else here</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="notifications-item d-flex align-items-center justify-content-between mb-3">
+										<div class="me-3">
+											<div class="d-flex">
+												<figure class="flex-shrink-0 me-2 mb-0 user-img-40"><img src="assets/img/dummy-user.png" alt="" title=""></figure>
+												<div class="flex-grow-1">
+													<p class="mb-1 tc-5">Your appointment has been successfully schedule with <strong class="tc-6 fw-medium">Nickson John</strong></p>
+													<p class="tc-7 mb-0">1 hr ago</p>
+												</div>
+											</div>
+										</div>
+										<div class="">
+											<div class="dropdown notifications-dropdown-h">
+												<a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-ellipsis"></i></a>
+												<ul class="dropdown-menu">
+													<li><a class="dropdown-item" href="#">Action</a></li>
+													<li><a class="dropdown-item" href="#">Another action</a></li>
+													<li><a class="dropdown-item" href="#">Something else here</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="notifications-item d-flex align-items-center justify-content-between mb-3">
+										<div class="me-3">
+											<div class="d-flex">
+												<figure class="flex-shrink-0 me-2 mb-0 user-img-40"><img src="assets/img/dummy-user.png" alt="" title=""></figure>
+												<div class="flex-grow-1">
+													<p class="mb-1 tc-5">Your appointment has been successfully schedule with <strong class="tc-6 fw-medium">Nickson John</strong></p>
+													<p class="tc-7 mb-0">1 hr ago</p>
+												</div>
+											</div>
+										</div>
+										<div class="">
+											<div class="dropdown notifications-dropdown-h">
+												<a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-ellipsis"></i></a>
+												<ul class="dropdown-menu">
+													<li><a class="dropdown-item" href="#">Action</a></li>
+													<li><a class="dropdown-item" href="#">Another action</a></li>
+													<li><a class="dropdown-item" href="#">Something else here</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="notifications-item d-flex align-items-center justify-content-between mb-3">
+										<div class="me-3">
+											<div class="d-flex">
+												<figure class="flex-shrink-0 me-2 mb-0 user-img-40"><img src="assets/img/dummy-user.png" alt="" title=""></figure>
+												<div class="flex-grow-1">
+													<p class="mb-1 tc-5">Your appointment has been successfully schedule with <strong class="tc-6 fw-medium">Nickson John</strong></p>
+													<p class="tc-7 mb-0">1 hr ago</p>
+												</div>
+											</div>
+										</div>
+										<div class="">
+											<div class="dropdown notifications-dropdown-h">
+												<a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-ellipsis"></i></a>
+												<ul class="dropdown-menu">
+													<li><a class="dropdown-item" href="#">Action</a></li>
+													<li><a class="dropdown-item" href="#">Another action</a></li>
+													<li><a class="dropdown-item" href="#">Something else here</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="notifications-item d-flex align-items-center justify-content-between mb-3">
+										<div class="me-3">
+											<div class="d-flex">
+												<figure class="flex-shrink-0 me-2 mb-0 user-img-40"><img src="assets/img/dummy-user.png" alt="" title=""></figure>
+												<div class="flex-grow-1">
+													<p class="mb-1 tc-5">Your appointment has been successfully schedule with <strong class="tc-6 fw-medium">Nickson John</strong></p>
+													<p class="tc-7 mb-0">1 hr ago</p>
+												</div>
+											</div>
+										</div>
+										<div class="">
+											<div class="dropdown notifications-dropdown-h">
+												<a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-ellipsis"></i></a>
+												<ul class="dropdown-menu">
+													<li><a class="dropdown-item" href="#">Action</a></li>
+													<li><a class="dropdown-item" href="#">Another action</a></li>
+													<li><a class="dropdown-item" href="#">Something else here</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+
+
+
+			</div>
+
+		</div>
+
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

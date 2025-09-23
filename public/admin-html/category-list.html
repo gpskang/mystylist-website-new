@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>MY STYLIST ADMIN | Category List</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+	<link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+</head>
+
+<body>
+	<div class="main d-flex">
+		<aside class="main-left-sidebar">
+			<div class="logo mb-2">
+				<a href="#"><img src="assets/img/logo.svg" alt="" title=""></a>
+			</div>
+			<div class="left-menu-main flex-fill">
+				<h6 class="menu-title">Main</h6>
+				<ul class="left-menu">
+					<li><a href="#"><img src="assets/img/icon-dashboard.svg" alt="" title="">Dashboard</a></li>
+					<li><a href="#"><img src="assets/img/icon-stylists-management.svg" alt="" title="">Stylists Management</a></li>
+					<li class="active"><a href="#"><img src="assets/img/icon-category-management.svg" alt="" title="">Category Management</a></li>
+					<li><a href="#"><img src="assets/img/icon-services-management.svg" alt="" title="">Services Management</a></li>
+				</ul>
+				<h6 class="menu-title">Business Management</h6>
+				<ul class="left-menu">
+					<li><a href="#"><img src="assets/img/icon-offer.svg" alt="" title="">Offer</a></li>
+					<li><a href="#"><img src="assets/img/icon-package.svg" alt="" title="">Package</a></li>
+					<li><a href="#"><img src="assets/img/icon-campaign.svg" alt="" title="">Campaign</a></li>
+					<li><a href="#"><img src="assets/img/icon-user-jobs.svg" alt="" title="">User Jobs</a></li>
+				</ul>
+				<h6 class="menu-title">Admin Approval</h6>
+				<ul class="left-menu">
+					<li><a href="#"><img src="assets/img/icon-gallery.svg" alt="" title="">Stylist gallery</a></li>
+					<li><a href="#"><img src="assets/img/icon-gallery.svg" alt="" title="">Saloon gallery</a></li>
+					<li><a href="#"><img src="assets/img/icon-offer.svg" alt="" title="">Offer</a></li>
+					<li><a href="#"><img src="assets/img/icon-package.svg" alt="" title="">Package</a></li>
+					<li><a href="#"><img src="assets/img/icon-campaign.svg" alt="" title="">Campaign</a></li>
+					<li><a href="#"><img src="assets/img/icon-user-jobs.svg" alt="" title="">User Jobs</a></li>
+				</ul>
+				<h6 class="menu-title">Chat Supervision</h6>
+				<ul class="left-menu">
+					<li><a href="#"><img src="assets/img/iocn-experts-inbox.svg" alt="" title="">Experts inbox</a></li>
+					<li><a href="#"><img src="assets/img/icon-user.svg" alt="" title="">User Inbox</a></li>
+				</ul>
+				<h6 class="menu-title">Notification Management</h6>
+				<ul class="left-menu">
+					<li><a href="#"><img src="assets/img/icon-push-notification.svg" alt="" title="">Push Notification</a></li>
+				</ul>
+				<h6 class="menu-title">Reports</h6>
+				<ul class="left-menu">
+					<li><a href="#"><img src="assets/img/icon-my-reports.svg" alt="" title="">My Reports</a></li>
+				</ul>
+				<h6 class="menu-title">Appointment Management</h6>
+				<ul class="left-menu">
+					<li><a href="#"><img src="assets/img/icon-appointment.svg" alt="" title="">Appointment</a></li>
+				</ul>
+				<h6 class="menu-title">FAQ’s Management</h6>
+				<ul class="left-menu">
+					<li><a href="#"><img src="assets/img/icon-push-notification.svg" alt="" title="">FAQ’S</a></li>
+				</ul>
+			</div>
+		</aside>
+
+		<div class="main-right-content flex-fill">
+
+			<div class="top-navbar">
+				<div class="container-fluid">
+					<div class="top-navbar-inner">
+						<div class="row align-items-center">
+							<div class="col-lg-6">
+								<div class="top-navbar-left">
+									<p class="mb-0">Welcome Back, <img src="assets/img/icon-wave.svg" alt="" title=""></p>
+									<p class="mb-0"><strong>Elisha Atif</strong></p>
+								</div>
+							</div>
+							<div class="col-lg-6 text-end">
+								<div class="d-inline-block align-top mx-1 top-navbar-notification">
+									<a><img src="assets/img/icon-notification.svg" alt="" title=""></a>
+								</div>
+								<div class="d-inline-block align-top mx-1 top-navbar-setting">
+									<a><img src="assets/img/icon-setting.svg" alt="" title=""></a>
+								</div>
+
+								<div class="dropdown d-inline-block align-top ms-1 top-navbar-user">
+									<a class="dropdown-toggle d-flex align-items-center text-start" data-bs-toggle="dropdown" aria-expanded="false">
+										<figure class="me-2 mb-0 top-navbar-user-img"><img src="assets/img/dummy-user.png" alt="" title=""></figure>
+										<div>
+											<strong class="d-block top-navbar-user-name">Elisha Atif</strong>
+											<span class="d-block top-navbar-user-email">elishaatif456@gmail.com</span>
+										</div>
+									</a>
+									<ul class="dropdown-menu">
+										<li><a class="dropdown-item" href="#">Action</a></li>
+										<li><a class="dropdown-item" href="#">Another action</a></li>
+										<li><a class="dropdown-item" href="#">Something else here</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="main-right-content-inner">
+
+				<div class="card mb-4">
+					<div class="card-body pb-0">
+						<div class="d-flex align-items-center mb-3">
+							<div>
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="#">Service Management</a></li>
+									<li class="breadcrumb-item active">Service Category</li>
+								</ol>
+								<h4 class="card-title mb-0">Category List</h4>
+							</div>
+							<div class="ms-auto">
+								<button type="button" class="btn-blue ms-2"><i class="fa-solid fa-plus me-2"></i>Add New</button>
+								<button type="button" class="btn-light1 ms-2"><i class="fa-solid fa-file-export me-2"></i>Export</button>
+							</div>
+						</div>
+						<div class="tabs1 d-flex">
+							<a href="#" class="active">All</a>
+							<a href="#">Permanent</a>
+							<a href="#">Temporary</a>
+							<a href="#">Active</a>
+							<a href="#">Inactive</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="card mb-4">
+					<div class="card-body">
+						<div class="row mb-3">
+							<div class="col-lg-4">
+								<div class="form-control-group-icon search">
+									<input type="text" class="form-control" placeholder="Search here...">
+									<i class="fa-solid fa-magnifying-glass"></i>
+								</div>
+							</div>
+							<div class="col-lg-4">
+							</div>
+							<div class="col-lg-4">
+								<div class="d-flex align-items-center justify-content-end">
+									<div class="">
+										<select class="form-select w-auto">
+											<option selected>Category type</option>
+											<option value="1">One</option>
+											<option value="2">Two</option>
+											<option value="3">Three</option>
+										</select>
+									</div>
+									<div class="form-control-group-icon ms-3">
+										<select class="form-select  w-auto">
+											<option selected>Sort</option>
+											<option value="1">One</option>
+											<option value="2">Two</option>
+											<option value="3">Three</option>
+										</select>
+										<i class="fa-solid fa-magnifying-glass"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card-body p-0">
+						<table class="table align-middle mb-4">
+							<thead>
+								<tr>
+									<th>SN.</th>
+									<th>Category</th>
+									<th>Category Type</th>
+									<th>No of User Added</th>
+									<th>Last Updated</th>
+									<th class="text-center">Active</th>
+									<th class="text-center">Action</th>
+									<th class="text-center"></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1.</td>
+									<td>Male Only</td>
+									<td>Permanent</td>
+									<td>1349</td>
+									<td>23, Oct 2023</td>
+									<td class="text-center">
+										<div class="form-check form-switch d-inline-block p-0 m-0">
+											<input class="form-check-input m-0" type="checkbox" role="switch">
+										</div>
+									</td>
+									<td class="text-center">
+										<a href="#" class="icon-btn"><img src="assets/img/icon-edit.svg" alt="" title=""></a>
+									</td>
+									<td class="text-center">
+										<a href="#" class="tc-4"><i class="fa-solid fa-angle-down"></i></a>
+									</td>
+								</tr>
+								<tr>
+									<td>2.</td>
+									<td>Male Only</td>
+									<td>Permanent</td>
+									<td>1349</td>
+									<td>23, Oct 2023</td>
+									<td class="text-center">
+										<div class="form-check form-switch d-inline-block p-0 m-0">
+											<input class="form-check-input m-0" type="checkbox" role="switch">
+										</div>
+									</td>
+									<td class="text-center">
+										<a href="#" class="icon-btn"><img src="assets/img/icon-edit.svg" alt="" title=""></a>
+									</td>
+									<td class="text-center">
+										<a href="#" class="tc-4"><i class="fa-solid fa-angle-up"></i></a>
+									</td>
+								</tr>
+								<tr class="sub-tr">
+									<td>Sub-Category</td>
+									<td>Hair Cutting</td>
+									<td>Permanent</td>
+									<td>340</td>
+									<td>20, Oct 2023</td>
+									<td class="text-center">
+										<div class="form-check form-switch d-inline-block p-0 m-0">
+											<input class="form-check-input m-0" type="checkbox" role="switch">
+										</div>
+									</td>
+									<td class="text-center">
+										<a href="#" class="icon-btn"><img src="assets/img/icon-view.svg" alt="" title=""></a>
+									</td>
+									<td class="text-center"> </td>
+								</tr>
+								<tr class="sub-tr">
+									<td>Sub-Category</td>
+									<td>Hair Cutting</td>
+									<td>Permanent</td>
+									<td>340</td>
+									<td>20, Oct 2023</td>
+									<td class="text-center">
+										<div class="form-check form-switch d-inline-block p-0 m-0">
+											<input class="form-check-input m-0" type="checkbox" role="switch">
+										</div>
+									</td>
+									<td class="text-center">
+										<a href="#" class="icon-btn"><img src="assets/img/icon-view.svg" alt="" title=""></a>
+									</td>
+									<td class="text-center"> </td>
+								</tr>
+								<tr>
+									<td>3.</td>
+									<td>Male Only</td>
+									<td>Permanent</td>
+									<td>1349</td>
+									<td>23, Oct 2023</td>
+									<td class="text-center">
+										<div class="form-check form-switch d-inline-block p-0 m-0">
+											<input class="form-check-input m-0" type="checkbox" role="switch">
+										</div>
+									</td>
+									<td class="text-center">
+										<a href="#" class="icon-btn"><img src="assets/img/icon-edit.svg" alt="" title=""></a>
+									</td>
+									<td class="text-center">
+										<a href="#" class="tc-4"><i class="fa-solid fa-angle-down"></i></a>
+									</td>
+								</tr>
+								<tr>
+									<td>4.</td>
+									<td>Male Only</td>
+									<td>Permanent</td>
+									<td>1349</td>
+									<td>23, Oct 2023</td>
+									<td class="text-center">
+										<div class="form-check form-switch d-inline-block p-0 m-0">
+											<input class="form-check-input m-0" type="checkbox" role="switch">
+										</div>
+									</td>
+									<td class="text-center">
+										<a href="#" class="icon-btn"><img src="assets/img/icon-edit.svg" alt="" title=""></a>
+									</td>
+									<td class="text-center">
+										<a href="#" class="tc-4"><i class="fa-solid fa-angle-down"></i></a>
+									</td>
+								</tr>
+								<tr>
+									<td>5.</td>
+									<td>Male Only</td>
+									<td>Permanent</td>
+									<td>1349</td>
+									<td>23, Oct 2023</td>
+									<td class="text-center">
+										<div class="form-check form-switch d-inline-block p-0 m-0">
+											<input class="form-check-input m-0" type="checkbox" role="switch">
+										</div>
+									</td>
+									<td class="text-center">
+										<a href="#" class="icon-btn"><img src="assets/img/icon-edit.svg" alt="" title=""></a>
+									</td>
+									<td class="text-center">
+										<a href="#" class="tc-4"><i class="fa-solid fa-angle-down"></i></a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<div class="d-flex align-items-center justify-content-end p-3">
+							<p class="tc-5 mb-0 me-3">Displaying 1 to 2 out of 2 records</p>
+							<ul class="pagination m-0">
+								<li class="page-item">
+									<a class="page-link"><i class="fa-solid fa-angle-left"></i></a>
+								</li>
+								<li class="page-item"><a class="page-link" href="#">1</a></li>
+								<li class="page-item"><a class="page-link" href="#">2</a></li>
+								<li class="page-item"><a class="page-link" href="#">3</a></li>
+								<li class="page-item">
+									<a class="page-link" href="#"><i class="fa-solid fa-angle-right"></i></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="card mb-4">
+					<div class="card-body">
+						<div class="d-flex align-items-center mb-4">
+							<div class="bs-r-6 ps-3">
+								<h4 class="card-title mb-0">Category Information</h4>
+								<p class="mb-0 tc-5">1349 User Added</p>
+							</div>
+							<div class="ms-auto"> </div>
+						</div>
+
+						<form class="form-area row align-items-center mb-5">
+							<div class="col">
+								<div class="upload-img-box">
+									<i class="fa-solid fa-file-arrow-up"></i>
+									<p class="mb-0">Upload Image</p>
+								</div>
+							</div>
+							<div class="col-lg-7">
+								<label for="" class="form-label">Category Name</label>
+								<input type="text" class="form-control" id="" placeholder="Male Only">
+							</div>
+							<div class="col">
+								<label for="" class="form-label">Status</label>
+								<select class="form-select" aria-label="Default select example">
+									<option selected>Active</option>
+									<option value="1">Inactive</option>
+								</select>
+							</div>
+						</form>
+
+						<div class="row align-items-center mb-3">
+							<div class="col-lg-5">
+								<h4 class="card-title mb-0">Stylist List</h4>
+							</div>
+							<div class="col-lg-7">
+								<div class="d-flex align-items-center justify-content-end">
+									<div class="form-control-group-icon search">
+										<input type="text" class="form-control" placeholder="Search here...">
+										<i class="fa-solid fa-magnifying-glass"></i>
+									</div>
+									<div class="form-control-group-icon ms-3">
+										<select class="form-select  w-auto">
+											<option selected="">Sort</option>
+											<option value="1">One</option>
+											<option value="2">Two</option>
+											<option value="3">Three</option>
+										</select>
+										<i class="fa-solid fa-magnifying-glass"></i>
+									</div>
+									<div class="ms-3">
+										<button type="button" class="btn-blue"><i class="fa-solid fa-plus me-2"></i>Add New</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card-body p-0">
+						<table class="table align-middle mb-0">
+							<thead>
+								<tr>
+									<th class="text-center"><input class="form-check-input me-2" type="checkbox" value="" id="">SN.</th>
+									<th>Stylist Name</th>
+									<th>Joining ID</th>
+									<th>Added Date</th>
+									<th>Overall Rating</th>
+									<th>Followers</th>
+									<th>Phone Number</th>
+									<th>No. Order</th>
+									<th>Action</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="text-center"><input class="form-check-input me-2" type="checkbox" value="" id="">1.</td>
+									<td>
+										<div class="d-flex align-items-center">
+											<figure class="flex-shrink-0 me-3 mb-0 user-img-40"><img src="assets/img/dummy-user.png" alt="" title=""></figure>
+											<div class="">
+												<p class="mb-0"><strong>James Bond</strong></p>
+												<p class="fs-12 mb-0">@jamesbond656</p>
+											</div>
+										</div>
+									</td>
+									<td><strong>#84589</strong></td>
+									<td><strong>23, Oct 2023</strong></td>
+									<td><span class="star me-2"><i class="fa-solid fa-star"></i></span><strong>4.9</strong></td>
+									<td><strong>24,569</strong></td>
+									<td><strong>+1 456 245 6979</strong></td>
+									<td><strong>234</strong></td>
+									<td>
+										<a href="#" class="icon-btn me-2"><img src="assets/img/icon-edit.svg" alt="" title=""></a>
+										<a href="#" class="icon-btn"><img src="assets/img/icon-delete.svg" alt="" title=""></a>
+									</td>
+								</tr>
+								<tr>
+									<td class="text-center"><input class="form-check-input me-2" type="checkbox" value="" id="">1.</td>
+									<td>
+										<div class="d-flex align-items-center">
+											<figure class="flex-shrink-0 me-3 mb-0 user-img-40"><img src="assets/img/dummy-user.png" alt="" title=""></figure>
+											<div class="">
+												<p class="mb-0"><strong>James Bond</strong></p>
+												<p class="fs-12 mb-0">@jamesbond656</p>
+											</div>
+										</div>
+									</td>
+									<td><strong>#84589</strong></td>
+									<td><strong>23, Oct 2023</strong></td>
+									<td><span class="star me-2"><i class="fa-solid fa-star"></i></span><strong>4.9</strong></td>
+									<td><strong>24,569</strong></td>
+									<td><strong>+1 456 245 6979</strong></td>
+									<td><strong>234</strong></td>
+									<td>
+										<a href="#" class="icon-btn me-2"><img src="assets/img/icon-edit.svg" alt="" title=""></a>
+										<a href="#" class="icon-btn"><img src="assets/img/icon-delete.svg" alt="" title=""></a>
+									</td>
+								</tr>
+								<tr>
+									<td class="text-center"><input class="form-check-input me-2" type="checkbox" value="" id="">1.</td>
+									<td>
+										<div class="d-flex align-items-center">
+											<figure class="flex-shrink-0 me-3 mb-0 user-img-40"><img src="assets/img/dummy-user.png" alt="" title=""></figure>
+											<div class="">
+												<p class="mb-0"><strong>James Bond</strong></p>
+												<p class="fs-12 mb-0">@jamesbond656</p>
+											</div>
+										</div>
+									</td>
+									<td><strong>#84589</strong></td>
+									<td><strong>23, Oct 2023</strong></td>
+									<td><span class="star me-2"><i class="fa-solid fa-star"></i></span><strong>4.9</strong></td>
+									<td><strong>24,569</strong></td>
+									<td><strong>+1 456 245 6979</strong></td>
+									<td><strong>234</strong></td>
+									<td>
+										<a href="#" class="icon-btn me-2"><img src="assets/img/icon-edit.svg" alt="" title=""></a>
+										<a href="#" class="icon-btn"><img src="assets/img/icon-delete.svg" alt="" title=""></a>
+									</td>
+								</tr>
+								<tr>
+									<td class="text-center"><input class="form-check-input me-2" type="checkbox" value="" id="">1.</td>
+									<td>
+										<div class="d-flex align-items-center">
+											<figure class="flex-shrink-0 me-3 mb-0 user-img-40"><img src="assets/img/dummy-user.png" alt="" title=""></figure>
+											<div class="">
+												<p class="mb-0"><strong>James Bond</strong></p>
+												<p class="fs-12 mb-0">@jamesbond656</p>
+											</div>
+										</div>
+									</td>
+									<td><strong>#84589</strong></td>
+									<td><strong>23, Oct 2023</strong></td>
+									<td><span class="star me-2"><i class="fa-solid fa-star"></i></span><strong>4.9</strong></td>
+									<td><strong>24,569</strong></td>
+									<td><strong>+1 456 245 6979</strong></td>
+									<td><strong>234</strong></td>
+									<td>
+										<a href="#" class="icon-btn me-2"><img src="assets/img/icon-edit.svg" alt="" title=""></a>
+										<a href="#" class="icon-btn"><img src="assets/img/icon-delete.svg" alt="" title=""></a>
+									</td>
+								</tr>
+								<tr>
+									<td class="text-center"><input class="form-check-input me-2" type="checkbox" value="" id="">1.</td>
+									<td>
+										<div class="d-flex align-items-center">
+											<figure class="flex-shrink-0 me-3 mb-0 user-img-40"><img src="assets/img/dummy-user.png" alt="" title=""></figure>
+											<div class="">
+												<p class="mb-0"><strong>James Bond</strong></p>
+												<p class="fs-12 mb-0">@jamesbond656</p>
+											</div>
+										</div>
+									</td>
+									<td><strong>#84589</strong></td>
+									<td><strong>23, Oct 2023</strong></td>
+									<td><span class="star me-2"><i class="fa-solid fa-star"></i></span><strong>4.9</strong></td>
+									<td><strong>24,569</strong></td>
+									<td><strong>+1 456 245 6979</strong></td>
+									<td><strong>234</strong></td>
+									<td>
+										<a href="#" class="icon-btn me-2"><img src="assets/img/icon-edit.svg" alt="" title=""></a>
+										<a href="#" class="icon-btn"><img src="assets/img/icon-delete.svg" alt="" title=""></a>
+									</td>
+								</tr>
+								<tr>
+									<td class="text-center"><input class="form-check-input me-2" type="checkbox" value="" id="">1.</td>
+									<td>
+										<div class="d-flex align-items-center">
+											<figure class="flex-shrink-0 me-3 mb-0 user-img-40"><img src="assets/img/dummy-user.png" alt="" title=""></figure>
+											<div class="">
+												<p class="mb-0"><strong>James Bond</strong></p>
+												<p class="fs-12 mb-0">@jamesbond656</p>
+											</div>
+										</div>
+									</td>
+									<td><strong>#84589</strong></td>
+									<td><strong>23, Oct 2023</strong></td>
+									<td><span class="star me-2"><i class="fa-solid fa-star"></i></span><strong>4.9</strong></td>
+									<td><strong>24,569</strong></td>
+									<td><strong>+1 456 245 6979</strong></td>
+									<td><strong>234</strong></td>
+									<td>
+										<a href="#" class="icon-btn me-2"><img src="assets/img/icon-edit.svg" alt="" title=""></a>
+										<a href="#" class="icon-btn"><img src="assets/img/icon-delete.svg" alt="" title=""></a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-lg-6">
+
+						<div class="card mb-4">
+							<div class="card-body">
+								<h4 class="text-center">Account Information</h4>
+
+								<form class="form-area1 row g-4">
+									<div class="col-lg-6">
+										<label for="" class="form-label">First Name</label>
+										<input type="text" class="form-control" id="" placeholder="First Name">
+									</div>
+									<div class="col-lg-6">
+										<label for="" class="form-label">Last Name</label>
+										<input type="text" class="form-control" id="" placeholder="Last Name">
+									</div>
+									<div class="col-lg-6">
+										<label for="" class="form-label">Email Address</label>
+										<input type="email" class="form-control" id="" placeholder="email@gmail.com">
+									</div>
+									<div class="col-lg-6">
+										<label for="" class="form-label">Phone Number</label>
+										<input type="text" class="form-control" id="" placeholder="+1 111 222 3333">
+									</div>
+									<div class="col-lg-12">
+										<label for="" class="form-label">Password</label>
+										<div class="position-relative">
+											<input type="password" class="form-control" id="" placeholder="**************">
+											<div class="password-icon1">
+												<i class="fa-regular fa-eye-slash"></i>
+												<!--<i class="fa-regular fa-eye"></i>-->
+											</div>
+										</div>
+									</div>
+									<div class="col-12">
+										<button type="submit" class="btn-blue1">Update Changes</button>
+									</div>
+								</form>
+
+							</div>
+						</div>
+
+					</div>
+
+					<div class="col-lg-6">
+
+						<div class="card mb-4">
+							<div class="card-body">
+								<div class="d-flex align-items-center mb-4">
+									<div class="bs-r-6 ps-3">
+										<h4 class="card-title mb-0">#857687</h4>
+										<p class="mb-0 tc-5">Last Updated: 23, May 2023</p>
+									</div>
+									<div class="ms-auto">
+										<div class="d-flex align-items-center justify-content-end">
+											<div class="">
+												<select class="form-select">
+													<option selected="">Pending</option>
+													<option value="1">One</option>
+													<option value="2">Two</option>
+													<option value="3">Three</option>
+												</select>
+											</div>
+											<div class="ms-3">
+												<button type="button" class="btn-blue red-btn-color"><i class="fa-regular fa-trash-can me-2"></i>Remove</button>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<h5 class="mb-3 tc-8">Offer Information</h5>
+								<h5 class="mb-2 tc-6">Buy 1 get 2 free</h5>
+								<p class="mb-2 tc-5">Purchase Limit: <span class="tc-6">10</span></p>
+								<p class="mb-2 tc-5">Start Date: <span class="tc-6">23 Sep, 2023</span></p>
+								<p class="mb-4 tc-5">End Date: <span class="tc-6">30 Sep, 2023</span></p>
+
+								<h5 class="mb-2 tc-8">Selected Services</h5>
+
+								<div class="d-flex mb-3">
+									<div class="btn-tag me-2 mb-2">Fades</div>
+									<div class="btn-tag me-2 mb-2">Tapers</div>
+									<div class="btn-tag me-2 mb-2">Beard Trims</div>
+									<div class="btn-tag me-2 mb-2">Hair Coloring</div>
+								</div>
+
+								<h4 class="mb-3">Stylist Detail</h4>
+								<div class="row align-items-center mb-3">
+									<div class="col-lg-8">
+										<div class="d-flex align-items-center">
+											<figure class="flex-shrink-0 me-3 mb-0 user-img-40"><img src="assets/img/dummy-user.png" alt="" title=""></figure>
+											<div class="">
+												<p class="mb-0"><strong>James Bond</strong></p>
+												<p class="fs-12 mb-0">@jamesbond656</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-4 text-end">
+										<button type="button" class="btn-light-round"><i class="fa-regular fa-message"></i></button>
+									</div>
+									<div class="col-lg-12">
+										<p class="h5 fw-normal mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...<a href="#" class="tc-6 fw-bold">read more</a></p>
+									</div>
+								</div>
+
+								<h4 class="fw-medium">Price Details</h4>
+
+								<p class="h5 d-flex align-items-center mb-2 tc-5">
+									<span class="fw-normal">Hair Cut</span>
+									<span class="tc-6 fw-medium ms-auto">$20</span>
+								</p>
+								<p class="h5 d-flex align-items-center mb-2 tc-5">
+									<span class="fw-normal">Bread Trim</span>
+									<span class="tc-6 fw-medium ms-auto">$10</span>
+								</p>
+								<p class="h5 d-flex align-items-center mb-2 tc-5">
+									<span class="fw-normal">Discount</span>
+									<span class="tc-6 fw-medium ms-auto">10%</span>
+								</p>
+								<p class="h5 d-flex align-items-center mb-2 tc-5">
+									<span class="fw-normal">Services</span>
+									<span class="tc-6 fw-medium ms-auto">3</span>
+								</p>
+								<p class="h5 d-flex align-items-center mb-2 tc-5">
+									<span class="fw-normal">Start Date</span>
+									<span class="tc-6 fw-medium ms-auto">23 Sep, 2023</span>
+								</p>
+								<p class="h5 d-flex align-items-center mb-2 tc-5">
+									<span class="fw-normal">End Date</span>
+									<span class="tc-6 fw-medium ms-auto">30 Sep, 2023</span>
+								</p>
+								<p class="h5 d-flex align-items-center mb-2 tc-5">
+									<span class="fw-normal">Payment Method</span>
+									<span class="tc-6 fw-medium ms-auto">MasterCard</span>
+								</p>
+								<hr class="my-3">
+								<p class="h5 d-flex align-items-center mb-2 tc-6">
+									<span class="fw-medium">Total (USD)</span>
+									<span class="tc-6 fw-medium ms-auto">$144.90</span>
+								</p>
+
+							</div>
+						</div>
+
+					</div>
+
+
+
+				</div>
+
+
+
+			</div>
+
+		</div>
+
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

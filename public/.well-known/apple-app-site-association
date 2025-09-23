@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "335JYYQB96.com.mystylist.user",
+        "paths": [ "/links.html/*" ]
+      }
+    ]
+  }
+}
