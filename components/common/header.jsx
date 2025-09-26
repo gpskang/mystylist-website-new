@@ -77,10 +77,10 @@ const Header = () => {
                                 <Link href="/contact">Contact Us</Link>
                             </li>
                             <li>
-                                <Link href="/privacyPolicy">Privacy Policy</Link>
+                                <Link href="/privacy-policy">Privacy Policy</Link>
                             </li>
                             <li>
-                                <Link href="/termCondition">Terms & Conditions</Link>
+                                <Link href="/term-condition">Terms & Conditions</Link>
                             </li>
                         </ul>
 

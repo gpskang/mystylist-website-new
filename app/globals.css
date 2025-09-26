@@ -76,7 +76,7 @@ h1,
 
 h2,
 .h2 {
-  font-size: 52px;
+  font-size: 2em !important;
   font-weight: 500;
   color: #000;
   line-height: 1.3;
