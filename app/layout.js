@@ -12,8 +12,73 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "MY STYLIST",
-  description: "MyStylist website",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://www.mystylist.app"),
+  title: {
+    default: "MyStylist – Book Beauty & Salon Services Near You",
+    template: "%s | MyStylist",
+  },
+  description:
+    "MyStylist helps you discover, compare and book top salon, spa and beauty services near you. Read verified reviews, browse portfolios and get exclusive offers.",
+  keywords: [
+    "MyStylist",
+    "salon booking",
+    "beauty services",
+    "spa near me",
+    "makeup artist",
+    "hair stylist",
+    "nail salon",
+    "bridal makeup",
+  ],
+  authors: [{ name: "MyStylist Team" }],
+  creator: "MyStylist",
+  publisher: "MyStylist",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName: "MyStylist",
+    title: "MyStylist – Book Beauty & Salon Services Near You",
+    description:
+      "Discover, compare and book top-rated salons and beauty professionals. Transparent pricing, verified reviews and easy online bookings.",
+    images: [
+      {
+        url: "/placeholder.jpg",
+        width: 1200,
+        height: 630,
+        alt: "MyStylist – Book Beauty & Salon Services",
+      },
+    ],
+    locale: "en_IN",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MyStylist – Book Beauty & Salon Services Near You",
+    description:
+      "Discover, compare and book top-rated salons and beauty professionals with MyStylist.",
+    images: ["/placeholder.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
+  category: "Beauty & Wellness",
+  verification: {
+    // Add your site-verification tokens if available
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -23,9 +88,8 @@ export default function RootLayout({ children }) {
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <meta name="robots" content="noindex, nofollow" />
+        <meta name="description" content="MyStylist helps you discover, compare and book top salon, spa and beauty services near you. Read verified reviews, browse portfolios and get exclusive offers." />
+        <meta name="author" content="MyStylist" />
         <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
