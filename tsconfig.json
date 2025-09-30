@@ -34,7 +34,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "app/(co-working)/co-working/page.js"  ],
+, "app/(co-working)/co-working/page.js", "apis/axios.instance.js", "apis/api.services.js", "apis/api.endpoints.js"  ],
   "exclude": [
     "node_modules"
   ]
