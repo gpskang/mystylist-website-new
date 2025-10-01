@@ -9,6 +9,7 @@ export default function Customers() {
     { id: 3, title: "Video Title", desc: "Description", img: "/img/happy.jpg" },
     { id: 4, title: "Video Title", desc: "Description", img: "/img/happy.jpg" },
     { id: 5, title: "Video Title", desc: "Description", img: "/img/happy.jpg" },
+    { id: 6, title: "Video Title", desc: "Description", img: "/img/happy.jpg" },
   ];
 
   return (
@@ -17,11 +18,11 @@ export default function Customers() {
         <h2 className="text-center !mb-12 lg:!text-4xl  !text-3xl !font-semibold !text-[#005865]">
           Our Happy Customers
         </h2>
-        <div className="mt-8  grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+        <div className="mt-8  grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 lg:!gap-6 !gap-4">
           {videos.map((video) => (
             <div
               key={video.id}
-              className="relative !h-[350px] sm:!h-[400px] w-full overflow-hidden rounded-xl shadow-lg group"
+              className="relative !h-[300px] sm:!h-[400px] w-full overflow-hidden rounded-xl shadow-lg group"
             >
               <Image
                 src={video.img}

@@ -18,7 +18,7 @@ export default function Page() {
         <div className="mx-auto lg:w-[85%] relative z-1 px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 py-12 sm:py-16 lg:py-20">
             <div>
-              <h1 className="text-4xl sm:text-5xl font-bold leading-tight text-black">
+              <h1 className=" lg:!text-6xl md:!text-5xl  !text-3xl font-bold leading-tight text-black">
                 Your Co-Working
                 <br />
                 Partner

@@ -235,7 +235,7 @@ export default function BookingCard() {
                                 } else {
                                     throw new Error("Failed to initiate payment");
                                 }
-                            } catch (e:any) {
+                            } catch (e: any) {
                                 setErrors({ submit: e?.response?.data?.message || e?.message || "Failed to submit" });
                             } finally {
                                 setLoading(false);
@@ -287,13 +287,13 @@ export default function BookingCard() {
                         <Input value={form.address} onChange={(e) => { setForm({ ...form, address: e.target.value }); if (errors.address) clearError("address"); }} placeholder="Address" className="h-10 bg-slate-100" />
                         {errors.address && <p className="text-xs text-red-600">{errors.address}</p>}
                     </div>
-                  <div className="">
-                  <label className="flex items-center gap-2 text-sm select-none">
-                        <input type="checkbox" checked={form.terms} onChange={(e) => { setForm({ ...form, terms: e.target.checked }); if (errors.terms && e.target.checked) clearError("terms"); }} className="h-4 w-4 rounded border" />
-                        <span>I accept <Link href="/(website)/term-condition" className="text-teal-700 underline">terms & conditions</Link></span>
-                    </label>
-                    {errors.terms && <p className="text-xs text-red-600">{errors.terms}</p>}
-                  </div>
+                    <div className="">
+                        <label className="flex items-center  !gap-3 text-sm select-none">
+                            <input type="checkbox" checked={form.terms} onChange={(e) => { setForm({ ...form, terms: e.target.checked }); if (errors.terms && e.target.checked) clearError("terms"); }} className="h-4 w-4 rounded border" />
+                            <span className="text-sm !ml-2">I accept <Link href="/(website)/term-condition" className="text-teal-700 underline">terms & conditions</Link></span>
+                        </label>
+                        {errors.terms && <p className="text-xs text-red-600">{errors.terms}</p>}
+                    </div>
                     {errors.submit && <p className="text-xs text-red-600">{errors.submit}</p>}
                     <Button type="submit" className="w-full h-10 !rounded-md bg-teal-600 hover:bg-teal-700">Submit & Pay</Button>
                 </form>
