@@ -63,24 +63,18 @@ export default function Navbar() {
 
       {open && (
         <div className="md:hidden border-t bg-white">
-          <div className="mx-auto max-w-7xl px-4 py-4 space-y-4">
+          <div className="mx-auto max-w-7xl !text-black px-4 py-4 !space-y-4">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="block text-sm font-medium text-slate-700"
+                className="block text-sm font-medium text-black"
                 onClick={() => setOpen(false)}
               >
                 {item.label}
               </a>
             ))}
-            <a
-              href="#contact"
-              onClick={() => setOpen(false)}
-              className="inline-flex w-full items-center justify-center rounded-md bg-teal-600 px-4 py-2 text-sm font-medium text-white shadow hover:bg-teal-700"
-            >
-              Join As Co-Working
-            </a>
+           
           </div>
         </div>
       )}
