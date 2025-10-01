@@ -2,7 +2,7 @@ import axios from "axios";
 // import { getSession } from "next-auth/react";
 
 const axiosInstance = axios.create({
-  baseURL:'http://localhost:4001/',
+  baseURL:'https://api.mystylist.in/',
 });
 
 const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
@@ -15,8 +15,8 @@ axiosInstance.interceptors.request.use(
         ?.split('=')[1] || 'en'; 
       // const session = await getSession();
       const token = null;
-      console.log("token", session);
-      if (!session) {
+      // console.log("token", session);
+      if (!token) {
         console.warn("Session is null");
       }
       if (config.headers) {

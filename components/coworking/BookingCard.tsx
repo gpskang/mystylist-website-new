@@ -12,6 +12,8 @@ import {
     InputOTPSlot,
 } from "@/components/ui/input-otp";
 import { z } from "zod";
+import { SendOtp, RegisterCoworking, InitiateCoworkingPayment } from "@/apis/api.services";
+import { extractOtp } from "@/lib/otp";
 
 function classNames(...classes: Array<string | false | null | undefined>) {
     return classes.filter(Boolean).join(" ");
@@ -26,7 +28,9 @@ export default function BookingCard() {
     const stylistNameRef = useRef<HTMLInputElement>(null);
     const [errors, setErrors] = useState<Record<string, string>>({});
     const [otp, setOtp] = useState("");
-    const [form, setForm] = useState({ name: "", gender: "", city: "", address: "", terms: false });
+    const [form, setForm] = useState({ name: "", email: "", gender: "", city: "", address: "", terms: false });
+    const [otpToken, setOtpToken] = useState<string | null>(null);
+    const [loading, setLoading] = useState(false);
 
     function clearError(key: string) {
         setErrors((prev) => {
@@ -49,7 +53,7 @@ export default function BookingCard() {
         }, 1000);
     }
 
-    function sendOtp() {
+    async function sendOtp() {
         const PhoneSchema = z
             .string()
             .trim()
@@ -59,9 +63,23 @@ export default function BookingCard() {
             setErrors({ phone: result.error.issues[0].message });
             return;
         }
-        setErrors({});
-        setStep("otp");
-        startOtpTimer();
+        try {
+            setErrors({});
+            setLoading(true);
+            const res = await SendOtp({ phone: `+91${phone}`, channel: "sms" });
+            const tokenFromApi = res?.data?.data?.token;
+            if (!tokenFromApi) {
+                throw new Error("OTP token missing in response");
+            }
+            setOtpToken(tokenFromApi);
+            setOtp("");
+            setStep("otp");
+            startOtpTimer();
+        } catch (e: any) {
+            setErrors({ phone: e?.response?.data?.message || e?.message || "Failed to send OTP" });
+        } finally {
+            setLoading(false);
+        }
     }
 
     function verifyOtp() {
@@ -72,6 +90,20 @@ export default function BookingCard() {
         const res = OtpSchema.safeParse(otp);
         if (!res.success) {
             setErrors({ otp: res.error.issues[0].message });
+            return;
+        }
+        if (!otpToken) {
+            setErrors({ otp: "Please request a new OTP" });
+            return;
+        }
+        try {
+            const expected = extractOtp(otpToken);
+            if (otp !== expected) {
+                setErrors({ otp: "Incorrect code" });
+                return;
+            }
+        } catch (e: any) {
+            setErrors({ otp: e?.message || "Could not verify code" });
             return;
         }
         setErrors({});
@@ -104,8 +136,8 @@ export default function BookingCard() {
                     </div>
                     {errors.phone && <p className="text-xs text-red-600">{errors.phone}</p>}
                     <div className="mt-4"></div>
-                    <Button type="button" onClick={sendOtp} className="w-full h-10 !rounded-md bg-teal-600 hover:bg-teal-700">
-                        Get OTP
+                    <Button type="button" disabled={loading} onClick={sendOtp} className="w-full h-10 !rounded-md bg-teal-600 hover:bg-teal-700">
+                        {loading ? "Sending..." : "Get OTP"}
                     </Button>
                 </form>
             )}
@@ -136,7 +168,7 @@ export default function BookingCard() {
                             Did not receive code yet? {seconds > 0 ? (
                                 <span>Re-send in 0:{String(seconds).padStart(2, "0")}</span>
                             ) : (
-                                <button type="button" onClick={startOtpTimer} className="text-teal-700 font-medium hover:underline">Re-send</button>
+                                <button type="button" onClick={sendOtp} className="text-teal-700 font-medium hover:underline">Re-send</button>
                             )}
                         </p>
                     </div>
@@ -151,6 +183,7 @@ export default function BookingCard() {
                         e.preventDefault();
                         const FormSchema = z.object({
                             name: z.string().trim().min(2, "Enter a valid name"),
+                            email: z.string().trim().email("Enter valid email").optional().or(z.literal("")),
                             gender: z.string().refine((v) => ["Female", "Male", "Other"].includes(v), "Select gender"),
                             city: z.string().trim().min(2, "Enter city"),
                             address: z.string().trim().min(5, "Enter address"),
@@ -164,7 +197,50 @@ export default function BookingCard() {
                             return;
                         }
                         setErrors({});
-                        // submit here
+                        const payload = {
+                            name: form.name,
+                            phone: phone,
+                            gender: form.gender.toLowerCase(),
+                            city: form.city,
+                            address: form.address,
+                            termsAccepted: form.terms,
+                            email: form.email || undefined,
+                        };
+                        (async () => {
+                            try {
+                                setLoading(true);
+                                const regRes = await RegisterCoworking(payload);
+                                const regData = regRes?.data;
+                                const userId = regData?.data?.user._id;
+                                if (!userId) throw new Error("Missing userId from registration");
+
+                                const payRes = await InitiateCoworkingPayment({
+                                    userId,
+                                    amount: 1,
+                                    name: regData?.data?.user.name,
+                                    email: regData?.data?.user.email || undefined,
+                                    phone: regData?.data?.user.phone,
+                                });
+                                const payment = payRes?.data?.data;
+                                const redirectForm = payment?.redirectForm;
+                                if (redirectForm) {
+                                    const w = window.open('', '_blank');
+                                    if (w) {
+                                        w.document.open();
+                                        w.document.write(redirectForm);
+                                        w.document.close();
+                                    } else {
+                                        throw new Error("Popup blocked. Please allow popups and try again.");
+                                    }
+                                } else {
+                                    throw new Error("Failed to initiate payment");
+                                }
+                            } catch (e:any) {
+                                setErrors({ submit: e?.response?.data?.message || e?.message || "Failed to submit" });
+                            } finally {
+                                setLoading(false);
+                            }
+                        })();
                     }}
                 >
                     <div className="">
@@ -176,6 +252,15 @@ export default function BookingCard() {
                             className="h-10 bg-slate-100"
                         />
                         {errors.name && <p className="text-xs text-red-600">{errors.name}</p>}
+                    </div>
+                    <div className="">
+                        <Input
+                            value={form.email}
+                            onChange={(e) => { setForm({ ...form, email: e.target.value }); if (errors.email) clearError("email"); }}
+                            placeholder="Email (optional)"
+                            className="h-10 bg-slate-100"
+                        />
+                        {errors.email && <p className="text-xs text-red-600">{errors.email}</p>}
                     </div>
                     <div className="flex gap-3 ">
                         <span className="flex items-center rounded-lg bg-slate-100 border border-r-0 px-3 text-sm text-slate-700">+91</span>
@@ -209,6 +294,7 @@ export default function BookingCard() {
                     </label>
                     {errors.terms && <p className="text-xs text-red-600">{errors.terms}</p>}
                   </div>
+                    {errors.submit && <p className="text-xs text-red-600">{errors.submit}</p>}
                     <Button type="submit" className="w-full h-10 !rounded-md bg-teal-600 hover:bg-teal-700">Submit & Pay</Button>
                 </form>
             )}
